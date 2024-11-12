@@ -1,204 +1,102 @@
-/* General Reset */
-* {
+
+.logo{
+    color:aliceblue;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+header {
+    background-color: #4a148c;
+    color: white;
+    padding: 40px 0;
 }
 
-/* Header and Navigation */
-header {
-    background-color: #6b5b95;
-    color: #fff;
-    padding: 20px;
-    position: fixed; /* Fixed position for the header */
-    width: 100%;
-    top: 0;
-    z-index: 10;
-}
 
 .nav-container {
+    position: fixed; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+    padding: 0 20px;
 }
 
 .nav-links a {
-    color: #fff;
-    text-decoration: none;
+    color: white;
     margin-left: 20px;
+    text-decoration: none;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
-}
 
-.mobile-toggle {
-    display: none; /* Hide mobile toggle for now */
-}
-
-/* Hero Section */
 .hero {
-    background-image: url('images/back3.jpg'); /* Replace with your hero image */
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     position: relative;
-    margin-top: 70px; /* Offset for fixed header */
-}
-
-.hero-content h1 {
-    font-size: 60px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-/* Featured Categories Section */
-.featured-categories {
-    padding: 40px 20px;
-}
-
-.section-title {
-    font-size: 36px;
-    color: #6b5b95;
+    background: url('images/back3.jpg');
+    height: 500px;
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+.hero-content {
+    position: relative;
+    top: 50px; 
+    font-size: 60px;
+
 }
+
 
 .category-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
     position: relative;
-}
-
-.category-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
 }
 
 .category-content {
     padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
-.category-content h3 {
-    font-size: 20px;
-    color: #333;
-}
-
-/* Footer */
-footer {
-    background-color:#6b5b95;;
-    color: #fff;
-    padding: 40px 20px;
-    margin-top: 40px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .footer-content {
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    background-color: #4a148c;
+    color: white;
+    padding: 20px;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .footer-section {
-    flex: 1 1 200px;
+    flex: 1;
     padding: 10px;
-    background-color: #6b5b95;;
 }
 
-.footer-section h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #111111;
-   
-}
-
-.footer-links {
-    list-style: none;
-   
-}
-
-.footer-links li a {
-   
-    color: #d4d3d3;
-    text-decoration: none;
-}
-
-.footer-links li a:hover {
-    color: #fff;
-}
-
-/* Positioning Examples */
-.category-content h3 {
-    position: relative; /* Relative positioning example */
-    top: 10px;
-}
-
-.hero-content {
-    position: static; /* Static positioning example */
-}
-
-.nav-container {
-    position: sticky; /* Sticky positioning example */
-    top: 0;
-}
-
-.footer-content {
-    position: absolute; /* Absolute positioning example */
-    left: 0;
-    right: 0;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-toggle {
-        display: block;
-        font-size: 24px;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .categories-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-section {
-        flex: 1 1 100%;
-        text-align: center;
-    }
+.footer-links a {
+    color: white;
+    display: block;
+    margin: 5px 0;
 }
